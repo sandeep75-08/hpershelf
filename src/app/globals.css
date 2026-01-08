@@ -157,6 +157,7 @@ a {
   transition: all 0.2s;
   cursor: pointer;
   font-weight: 500;
+  border: none;
 }
 
 .nav-item:hover,

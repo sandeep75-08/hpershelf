@@ -26,11 +26,11 @@ export default function RecForm({ initialData, onSuccess }: RecFormProps) {
     const availableGenres = genresData?.map(g => g.name) || [];
 
     useEffect(() => {
-        if (availableGenres.length > 0 && !initialData && !type) {
+        if (availableGenres.length > 0 && !initialData) {
             // Set default type to first DB genre only if not editing and type is empty
             setType(availableGenres[0]);
         }
-    }, [availableGenres.length, initialData, type]);
+    }, [availableGenres, initialData]);
 
     useEffect(() => {
         if (initialData) {
