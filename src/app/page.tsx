@@ -28,9 +28,6 @@ export default function Home() {
             Collect and share the stuff<br />
             <span style={{ color: "var(--primary)" }}>you're hyped about</span>
           </h1>
-          {/* <p style={{ color: "var(--text-muted)", fontSize: "1.2rem", maxWidth: "600px", margin: "0 auto" }}>
-            A shared movie recommendations for friends.
-          </p> */}
         </section>
 
         <section style={{ marginBottom: "2rem" }}>

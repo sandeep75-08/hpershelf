@@ -22,12 +22,10 @@ export default function RecForm({ initialData, onSuccess }: RecFormProps) {
     const [imageUrl, setImageUrl] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // Use genres from DB
     const availableGenres = genresData?.map(g => g.name) || [];
 
     useEffect(() => {
         if (availableGenres.length > 0 && !initialData) {
-            // Set default type to first DB genre only if not editing and type is empty
             setType(availableGenres[0]);
         }
     }, [availableGenres, initialData]);
@@ -40,7 +38,6 @@ export default function RecForm({ initialData, onSuccess }: RecFormProps) {
             setBlurb(initialData.blurb);
             setImageUrl(initialData.imageUrl || "");
         } else {
-            // Reset if we switch from edit to create
             setTitle("");
             setType("");
             setLink("");
@@ -64,7 +61,6 @@ export default function RecForm({ initialData, onSuccess }: RecFormProps) {
                 await updateRec({ id: initialData._id, ...payload });
             } else {
                 await createRec(payload);
-                // Only clear form on create
                 setTitle("");
                 setLink("");
                 setBlurb("");

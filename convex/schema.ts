@@ -12,10 +12,10 @@ export default defineSchema({
 
   recommendations: defineTable({
     title: v.string(),
-    type: v.string(), // genre: horror, action, etc.
+    type: v.string(),
     link: v.string(),
     blurb: v.string(),
-    userId: v.string(), // tokenIdentifier of the creator
+    userId: v.string(),
     authorName: v.string(),
     isStaffPick: v.boolean(),
     imageUrl: v.optional(v.string()),

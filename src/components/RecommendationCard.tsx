@@ -4,7 +4,6 @@ import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { Id } from "../../convex/_generated/dataModel";
 import { Trash2, Star, ExternalLink } from "lucide-react";
-import clsx from "clsx";
 
 interface RecommendationProps {
     id: Id<"recommendations">;
@@ -13,10 +12,10 @@ interface RecommendationProps {
     link: string;
     blurb: string;
     authorName: string;
-    authorId: string; // The tokenIdentifier of the author
+    authorId: string;
     isStaffPick: boolean;
     imageUrl?: string;
-    currentUserId?: string; // The tokenIdentifier of the current user
+    currentUserId?: string;
     currentUserRole?: "admin" | "user";
 }
 

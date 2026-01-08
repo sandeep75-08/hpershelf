@@ -271,7 +271,6 @@ a {
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   overflow-x: auto;
-  /* Allow horizontal scroll on table */
 }
 
 .data-table {
@@ -279,7 +278,6 @@ a {
   border-collapse: collapse;
   font-size: 0.95rem;
   min-width: 600px;
-  /* Ensure table doesn't squash too much */
 }
 
 .data-table th {
@@ -464,7 +462,6 @@ a {
   color: var(--foreground);
   font-family: inherit;
   font-size: 1rem;
-  /* 16px to prevent zoom on iOS */
   transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
 
@@ -581,7 +578,6 @@ a {
 .search-input,
 .filter-select {
   padding-left: 2.5rem !important;
-  /* Make room for icon */
 }
 
 .search-input {
@@ -611,7 +607,6 @@ a {
     align-items: flex-start;
   }
 
-  /* Reset width for header children to ensure they take full width if needed */
   .header>div {
     width: 100%;
   }
@@ -632,7 +627,6 @@ a {
 
   .user-nav {
     flex-direction: column;
-    /* Put dashboard button below details on mobile */
     align-items: flex-start;
     width: 100%;
     gap: 1rem;
@@ -644,7 +638,6 @@ a {
     align-items: center;
   }
 
-  /* Dashboard mobile adjustments */
   .dashboard-layout {
     flex-direction: column;
   }
@@ -690,14 +683,12 @@ a {
   .data-table th,
   .data-table td {
     padding: 0.8rem 1rem;
-    /* Compact padding */
   }
 
   .main-content {
     margin-left: 0;
     width: 100%;
     padding: 1rem;
-    /* Reduce padding */
   }
 
   h1 {

@@ -2,7 +2,7 @@
 
 import { UserButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
-import { LayoutDashboard, Users, PlusCircle, LogOut, Tags } from "lucide-react";
+import { LayoutDashboard, Users, PlusCircle, Tags } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 interface SidebarProps {

@@ -86,7 +86,6 @@ export const update = mutation({
             throw new Error("Unauthorized: You can only edit your own recommendations");
         }
 
-        // Explicitly handle imageUrl to allow clearing it
         const updateData: any = {
             title: updates.title,
             type: updates.type,
@@ -94,7 +93,6 @@ export const update = mutation({
             blurb: updates.blurb,
         };
 
-        // If imageUrl is provided (even if undefined), update it
         if ('imageUrl' in updates) {
             updateData.imageUrl = updates.imageUrl;
         }
@@ -112,7 +110,7 @@ export const deleteRec = mutation({
         }
 
         const rec = await ctx.db.get(args.id);
-        if (!rec) return; // Already deleted or doesn't exist
+        if (!rec) return;
 
         const user = await ctx.db
             .query("users")
