@@ -25,10 +25,10 @@ export default function RecForm({ initialData, onSuccess }: RecFormProps) {
     const availableGenres = genresData?.map(g => g.name) || [];
 
     useEffect(() => {
-        if (availableGenres.length > 0 && !initialData) {
+        if (availableGenres.length > 0 && !initialData && !type) {
             setType(availableGenres[0]);
         }
-    }, [availableGenres, initialData]);
+    }, [availableGenres, initialData, type]);
 
     useEffect(() => {
         if (initialData) {
